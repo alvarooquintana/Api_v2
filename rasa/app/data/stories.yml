@@ -1,0 +1,59 @@
+version: "2.0"
+
+stories:
+
+- story: happy path 1
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+- story: happy path 2
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+  - intent: thank_you
+  - action: utter_thank_you
+
+- story: sad path 1
+  steps:
+  - intent: deny
+  - action: utter_deny
+  - intent: thank_you
+  - action: utter_thank_you
+
+- story: sad path 2
+  steps:
+  - intent: deny
+  - action: utter_deny
+
+- story: cancel path 1
+  steps:
+  - intent: cancel_subscription
+  - action: utter_cancel_subscription
+  - intent: thank_you
+  - action: utter_thank_you
+
+- story: cancel path 2
+  steps:
+  - intent: cancel_subscription
+  - action: utter_cancel_subscription
+  - intent: thank_you
+  - action: utter_thank_you
+
+- story: random path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: random path 2
+  steps:
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+  - intent: goodbye
+  - action: utter_goodbye
+
+# Todo: add help story/path/itent...
